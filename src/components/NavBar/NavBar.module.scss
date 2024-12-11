@@ -1,0 +1,56 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+
+
+.navBarStyling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px; // Startbredde
+    background-color: $secondary;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    transition: width 0.3s ease;
+  
+    // Når navbar er udvidet
+    &.expanded {
+      width: 200px; // Udvidet bredde
+    }
+  
+    h1 {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      white-space: nowrap;
+  
+      // Skjul tekst, når navbar ikke er udvidet
+      .navbar:not(.expanded) & {
+        display: none;
+      }
+    }
+  }
+  
+  // Stil for alarm-knappen
+  .alarmButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: 1rem;
+    padding: 0;
+  
+    img {
+      width: 40px;
+      height: 40px;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+  
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
