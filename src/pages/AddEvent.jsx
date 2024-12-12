@@ -1,5 +1,7 @@
 export function AddEvent() {
   return (
-    <div>AddEvent</div>
+    <div>
+      <h2>Add Event</h2>
+    </div>
   )
 }

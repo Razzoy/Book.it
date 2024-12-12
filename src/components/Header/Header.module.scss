@@ -1,0 +1,32 @@
+@use '../../styles/variables' as *;
+@use '../../styles/placeholders' as *;
+
+.headerStyling {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.iconStyling {
+
+    display: flex;
+    gap: 0.5rem;
+
+    a {
+        img {
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+    }
+}
+
+.clockTime{
+    align-self: center;
+    @extend %roboto;
+    font-weight: 200;
+    font-size: 24px;
+    opacity: 0.5;
+}

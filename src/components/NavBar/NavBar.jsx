@@ -22,29 +22,31 @@ export function NavBar() {
         <span className={style.splitter}></span>
         <div className={style.iconStyling}>
           <NavLink to={'/'}>
-              <h3>{isExpanded ? "Home" : ""}</h3>
-              <IconComponent src={"home.png"} />
+            <h3>{isExpanded ? "Home" : ""}</h3>
+            <IconComponent src={"home.png"} />
           </NavLink>
         </div>
         <div className={style.iconStyling}>
           <NavLink to={'/addEvent'}>
-              <h3>{isExpanded ? "Add Event" : ""}</h3>
-              <IconComponent src={"plus.png"} />
+            <h3>{isExpanded ? "Add Event" : ""}</h3>
+            <IconComponent src={"plus.png"} />
           </NavLink>
         </div>
         <div className={style.iconStyling}>
           <NavLink to={'/settings'}>
-              <h3>{isExpanded ? "Settings" : ""}</h3>
-              <IconComponent src={"settings.png"} />
+            <h3>{isExpanded ? "Settings" : ""}</h3>
+            <IconComponent src={"settings.png"} />
           </NavLink>
         </div>
       </div>
-      <div className={style.iconStyling}>
-          <NavLink to={'/login'}>
-              <h3>{isExpanded ? "Profile" : ""}</h3>
-              <IconComponent src={"login.png"} />
+      <span className={style.buttomIcon}>
+        <div className={style.iconStyling}>
+          <NavLink to={'/signIn'}>
+            <h3>{isExpanded ? "Profile" : ""}</h3>
+            <IconComponent src={"user.png"} />
           </NavLink>
         </div>
+      </span>
     </div>
   );
 }

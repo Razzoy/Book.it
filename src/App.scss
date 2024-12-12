@@ -1,16 +1,39 @@
 @use './styles/variables' as *;
 @use './styles/placeholders' as *;
 
-
-body{
-    @extend %noMarPad;
-    @extend %roboto;
-    main{
-        
-        a{
-            text-decoration: none;
-            color: $primary;
-        }
-    }
+html {
+    background-color: #9f9f9f;
 }
 
+body {
+    background-color: $secondary;
+    @extend %noMarPad;
+    @extend %roboto;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 10rem;
+
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 100;
+}
+h1 {
+    font-size: 40px;
+}
+h2{
+    font-size: 32px;
+}
+
+p {
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    color: $primary;
+}
