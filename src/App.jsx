@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { SignUp } from './pages/SignUp'
 import { SignIn } from './pages/SignIn'
 import { AddEvent } from './pages/AddEvent'
+import "./App.scss";
 
 function App() {
 

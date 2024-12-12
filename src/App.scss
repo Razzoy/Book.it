@@ -1,3 +1,16 @@
 @use './styles/variables' as *;
 @use './styles/placeholders' as *;
 
+
+body{
+    @extend %noMarPad;
+    @extend %roboto;
+    main{
+        
+        a{
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+}
+
