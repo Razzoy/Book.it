@@ -1,0 +1,59 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/placeholders' as *;
+
+.inputStyling {
+    display: flex;
+    flex-direction: column;
+
+
+
+    label {
+        font-weight: 100;
+        font-size: 10px;
+        color: #414141;
+    }
+}
+
+.inputWrapper {
+    position: relative;
+
+    input {
+        border: 2px solid #41414125;
+        font-size: 12px;
+        padding: 0.3rem 0;
+        border-radius: 5px;
+        background-color: transparent;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.inputIcon {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.textareaStyling {
+    border: 2px solid #41414125;
+    font-size: 12px;
+    padding: 0.3rem 0;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 100%;
+    height: 4rem;
+    resize: none;
+
+    &:focus {
+        outline: none;
+    }
+}

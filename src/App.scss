@@ -22,6 +22,7 @@ h3 {
     font-weight: 100;
 }
 h1 {
+    @extend %noMarPad;
     font-size: 40px;
 }
 h2{

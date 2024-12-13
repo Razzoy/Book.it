@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { IconComponent } from "../IconComponent/IconComponent";
 import style from '../Header/Header.module.scss'
 import { useEffect, useState } from "react";
@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export function Header() {
 
     const [time, setTime] = useState("");
+    const location = useLocation();
 
     const updateLocalTime = () => {
         const currentDate = new Date();
@@ -21,11 +22,11 @@ export function Header() {
         return () => clearInterval(interval);
     })
 
-    const userName = "Mathias";
+    const userName = "Guest";
 
     return (
         <div className={style.headerStyling}>
-            <h1>Welcome back {userName}</h1>
+            {location.pathname === "/" && <h1>Welcome back {userName}</h1>}
             <div className={style.iconStyling}>
                 <NavLink to={'/signIn'}>
                     <IconComponent src={"user.png"} />
